@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <meta http-equiv="refresh" content="1" > -->
+	<!-- animate css -->
+	<link rel="stylesheet" href="styles/animate.css">
 	<!-- Style LESS -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 	<link rel="stylesheet" href="styles/main.css" type="text/css">
@@ -15,6 +17,7 @@
 	
 </head>
 <body>
+<a href="#" class="back-to-top">BACK</a>
 <header>
 	<div class="container">
 		<div class="logo"><img src="images/logo.png"></div>
@@ -29,7 +32,7 @@
 
 	</div>
 </header>
-<section class="banner">
+<section class="banner" id="section10">
 
 	<div class="container">
 	<div class="overlay"></div>
@@ -38,9 +41,10 @@
 			<h2>Front End Web-Developer</h2>
 		</div>
 	</div>
-	<div class="go-content">
-	<a href="#about"><span class="fa fa-angle-down"></span></a>
-	</div>
+	<a href="#about"><span></span><span></span><span></span></a>
+	<!-- <div class="go-content ">
+	<a href="#about"><span class="fa fa-angle-double-down animated infinite bounce"></span></a>
+	</div> -->
 </section>
 <section class="about" id="about">
 	<div class="container">
@@ -85,6 +89,27 @@ $(document).ready(function() {
     }
   });
 });
+$(function() {
+	$('a[href*=#]').on('click', function(e) {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+	});
+});
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > 300 ) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
+$('a.back-to-top').click(function() {
+	$('html, body').animate({
+		scrollTop: 0
+	}, 900);
+	return false;
+});
 </script>
+
+
 </body>
 </html>

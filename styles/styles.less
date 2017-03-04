@@ -124,8 +124,8 @@ section {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	background: url(../images/overlay.png);
 }
 .go-content {
@@ -141,9 +141,10 @@ section {
 		color: #ccc;
 		text-align: center;
 		border: 1px solid #fff;
+		padding: 6px 10px;
 		
 	}
-	span {
+	.fa-angle-double-down {
 		transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
 	font-size: 20px;
@@ -160,7 +161,7 @@ section {
 			.dark-overlay;
 		}
 	.section-content {
-		padding-top: 50vh;
+		padding-top: 28vh;
 		position: absolute;
 		text-align: center;
 		left: 0;
@@ -186,4 +187,74 @@ section {
 }
 .works {
 	background: blue;
+}
+#section10 a {
+	padding-top: 60px;
+}
+#section10 a span {
+	z-index: 999;
+	position: absolute;
+	bottom: 48px;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: sdb07 2s infinite;
+	animation: sdb07 2s infinite;
+	opacity: 0;
+	box-sizing: border-box;
+}
+#section10 a span:nth-of-type(1) {
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s;
+}
+#section10 a span:nth-of-type(2) {
+	bottom: 32px;
+	-webkit-animation-delay: .15s;
+	animation-delay: .15s;
+}
+#section10 a span:nth-of-type(3) {
+	bottom: 16px;
+	-webkit-animation-delay: .3s;
+	animation-delay: .3s;
+}
+@-webkit-keyframes sdb07 {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes sdb07 {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+a.back-to-top {
+	display: none;
+	width: 40px;
+	height: 40px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	background: #ccc url("../images/up-arrow.png") no-repeat center 43%;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
