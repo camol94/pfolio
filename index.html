@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kamil Bała Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <meta http-equiv="refresh" content="1" > -->
+	<!-- Style LESS -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+	<link rel="stylesheet" href="styles/main.css" type="text/css">
+	<!-- jQuery -->
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	
+</head>
+<body>
+<header>
+	<div class="container">
+		<div class="logo"><img src="images/logo.png"></div>
+		<nav>
+			<ul class="nav">
+				<li><a href="#about">O mnie</a></li>
+  				<li><a href="#skills">Narzędzia</a></li>
+				<li><a href="#works">Moje Prace</a></li>
+			    <li><a href="#contact">Kontakt</a></li>
+			</ul>
+		</nav>
+
+	</div>
+</header>
+<section class="banner">
+
+	<div class="container">
+	<div class="overlay"></div>
+		<div class="section-content">
+			<h1>Kamil Bała</h1>
+			<h2>Front End Web-Developer</h2>
+		</div>
+	</div>
+	<div class="go-content">
+	<a href="#about"><span class="fa fa-angle-down"></span></a>
+	</div>
+</section>
+<section class="about" id="about">
+	<div class="container">
+		<div class="section-title">Sekcja About</div>
+		<div class="section-content">Content sekcji</div>
+	</div>
+</section>
+<section class="skills" id="skills">
+	<div class="container">
+		<div class="section-title">Sekcja About</div>
+		<div class="section-content">Content sekcji</div>
+	</div>
+</section>
+<section class="works" id="works">
+	<div class="container">
+		<div class="section-title">Sekcja About</div>
+		<div class="section-content">Content sekcji</div>
+	</div>
+</section>
+<section class="contact" id="contact">
+	<div class="container">
+		<div class="section-title">Sekcja About</div>
+		<div class="section-content">Content sekcji</div>
+	</div>
+</section>
+<footer>
+	<section class="footer-main">
+		STOPKA MAIN
+	</section>
+	<section class="footer-copy">
+		STOPKA COPY
+	</section>
+</footer>
+<script>
+$(document).ready(function() {
+	$(window).scroll(function() {
+  	if($(document).scrollTop() > 10) {
+    	$('header').addClass('shrink');
+    }
+    else {
+    $('header').removeClass('shrink');
+    }
+  });
+});
+</script>
+</body>
+</html>
