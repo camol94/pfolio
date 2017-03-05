@@ -125,8 +125,9 @@ a img {
   outline: 0;
 }
 body {
-  background: #000;
+  background: #fff;
   font-family: 'Open Sans', sans-serif;
+  min-width: 360px;
 }
 .container {
   max-width: 1200px;
@@ -247,39 +248,15 @@ header .logo img {
   background: rgba(0, 0, 0, 0.7);
   height: 85px;
 }
-section {
-  padding: 180px 0;
-}
 .dark-overlay {
   content: "";
   z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: url(../images/overlay.png);
-}
-.go-content {
-  position: absolute;
-  bottom: 15px;
-  z-index: 1;
-  text-align: center;
-  display: block;
-  width: 100%;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-.go-content a {
-  color: #ccc;
-  text-align: center;
-  border: 1px solid #fff;
-  padding: 6px 10px;
-}
-.go-content .fa-angle-double-down {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  font-size: 20px;
 }
 .banner {
   background: url(../images/banner.png);
@@ -295,7 +272,7 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: url(../images/overlay.png);
 }
@@ -309,24 +286,29 @@ section {
   z-index: 1;
 }
 .banner h1 {
-  font-size: 38px;
+  font-size: 19px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  .banner h1 {
+    font-size: 48px;
+  }
 }
 .banner h2 {
-  font-size: 27px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
-.about {
-  background: blue;
+@media only screen and (min-width: 768px) {
+  .banner h2 {
+    font-size: 38px;
+  }
 }
-.skills {
-  background: red;
-}
-.works {
-  background: blue;
-}
-#section10 a {
+.banner a {
   padding-top: 60px;
 }
-#section10 a span {
+.banner a span {
   z-index: 999;
   position: absolute;
   bottom: 48px;
@@ -343,16 +325,16 @@ section {
   opacity: 0;
   box-sizing: border-box;
 }
-#section10 a span:nth-of-type(1) {
+.banner a span:nth-of-type(1) {
   -webkit-animation-delay: 0s;
   animation-delay: 0s;
 }
-#section10 a span:nth-of-type(2) {
+.banner a span:nth-of-type(2) {
   bottom: 32px;
   -webkit-animation-delay: .15s;
   animation-delay: .15s;
 }
-#section10 a span:nth-of-type(3) {
+.banner a span:nth-of-type(3) {
   bottom: 16px;
   -webkit-animation-delay: .3s;
   animation-delay: .3s;
@@ -392,4 +374,16 @@ a.back-to-top {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+}
+.section-title {
+  padding-top: 100px;
+}
+.skills {
+  background: #F8F8F8;
+}
+.works {
+  padding: 520px 0;
+}
+.contact {
+  background: #f8f8f8;
 }
